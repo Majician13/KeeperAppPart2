@@ -2,12 +2,19 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
+import notes from "../notes";
+
+function createEntry(newNote) {
+  return (
+    <Note key={newNote.id} title={newNote.title} content={newNote.content} />
+  );
+}
 
 function App() {
   return (
     <div>
       <Header />
-      <Note />
+      {notes.map(createEntry)}
       <Footer />
     </div>
   );
