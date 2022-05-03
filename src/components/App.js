@@ -6,7 +6,7 @@ import notes from "../notes";
 
 function createEntry(newNote) {
   return (
-    <Note key={newNote.id} title={newNote.title} content={newNote.content} />
+    <Note key={newNote.key} title={newNote.title} content={newNote.content} />
   );
 }
 
